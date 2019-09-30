@@ -1,0 +1,34 @@
+{
+  "name": "sails-cubejs-glue",
+  "version": "1.0.0",
+  "description": "a glue for cubejs to be used in sails's action",
+  "main": "lib/sails-cubejs-glue.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanhs/sails-cubejs-glue.git"
+  },
+  "keywords": [
+    "sails",
+    "cubejs"
+  ],
+  "author": "ryanhs <mr.ryansilalahi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanhs/sails-cubejs-glue/issues"
+  },
+  "homepage": "https://github.com/ryanhs/sails-cubejs-glue#readme",
+  "engines": {
+    "node": ">=8.11"
+  },
+  "dependencies": {
+    "@cubejs-backend/server-core": "^0.10.44",
+    "express": "^4.17.1",
+    "run-middleware": "^0.9.10"
+  }
+}
