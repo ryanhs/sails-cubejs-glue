@@ -64,6 +64,61 @@ module.exports.routes = {
 
 ```
 
+### Func: async bootstrap()
+
+this function is to bootstrap cubejs
+
+###### + parameters
+
+- schemas `array of cubejs schema` (example bellow)
+- options `(optional, to overrides cubejs-backend/server-core options)`
+
+###### + example
+
+```javascript
+sails.cubeApp = await glue.bootstrap(schemas, {
+  basePath: '/cube',
+  logger: (msg, params) => {
+    console.log(`${msg}: ${JSON.stringify(params)}`);
+  },
+});
+```
+
+###### Reference
+
+cubejs-backend-server-core docs: [https://cube.dev/docs/@cubejs-backend-server-core#options-reference](https://cube.dev/docs/@cubejs-backend-server-core#options-reference)
+
+
+### Func: createProxy(cubeApp)(req, res)
+
+This function to proxying cubejs app into normal handler `(req, res) => ...`
+
+
+
+###### + parameters
+
+- cubeApp `return of this module bootstrap`
+
+###### + examples in action
+
+1.
+```javascript
+module.exports = glue.createProxy(sails.cubeApp);
+```
+
+2.
+```javascript
+module.exports = (req, res) => {
+  var proxy = glue.createProxy(sails.cubeApp);
+      proxy(req, res);
+};
+```
+
+###### Reference
+
+cubejs-backend-server-core docs: [https://cube.dev/docs/@cubejs-backend-server-core#options-reference](https://cube.dev/docs/@cubejs-backend-server-core#options-reference)
+
+
 
 ### Connecting to Database
 
