@@ -114,11 +114,6 @@ module.exports = (req, res) => {
 };
 ```
 
-###### Reference
-
-cubejs-backend-server-core docs: [https://cube.dev/docs/@cubejs-backend-server-core#options-reference](https://cube.dev/docs/@cubejs-backend-server-core#options-reference)
-
-
 
 ### Connecting to Database
 
